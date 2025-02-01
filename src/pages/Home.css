@@ -1,131 +1,128 @@
-/* Home.css */
-
 /* General Section Styles */
 .section-padding {
-    padding: 40px 0;
-  }
-  
-  .section-bg-light {
-    background-color: #f8f9fa;
-  }
-  
-  /* Carousel Caption Styles */
-  .carousel-caption-custom {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-  }
-  
-  /* Carousel Item Background Styles */
-  .carousel-item-custom {
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    position: relative;
-    border-radius: 10px;
-  }
-  
-  /* Image Styles for 'Welcome to BAIT-UN-NASR' Section */
-  .welcome-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Latest News Section Styles */
-  .latest-news-header {
-    color: #888;
-    font-size: 14px;
-  }
-  
-  .latest-news-title {
-    font-weight: 600;
-    color: #333;
-  }
-  
-  .latest-news-description {
-    color: #555;
-    font-size: 16px;
-  }
-  
-  /* Image Styles for Latest News */
-  .latest-news-img {
-    border-radius: 8px;
-    width: 100%;
-    max-width: 250px;
-    height: 250px;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  /* Flexbox Adjustments */
-  .d-flex-custom {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.section-bg-light {
+  background-color: #f8f9fa;
+}
+
+/* Carousel Caption Styles */
+.carousel-caption-custom {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+/* Carousel Item Background Styles */
+.carousel-item-custom {
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* Image Styles for 'Welcome to BAIT-UN-NASR' Section */
+.welcome-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Latest News Section Styles */
+.latest-news-header {
+  color: #888;
+  font-size: 14px;
+}
+
+.latest-news-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.latest-news-description {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Image Styles for Latest News */
+.latest-news-img {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Flexbox Adjustments */
+.d-flex-custom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Card and image styling */
+.director-card {
+  border: 1px solid #ddd; /* Add border around the card */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.director-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.director-image-container {
+  height: 120px; /* Set a smaller height for the image container */
+  width: 120px;  /* Set a specific width for the circular image */
+  overflow: hidden; /* Ensure the image is clipped within the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center the image within the card */
+}
+
+.director-card img {
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Ensure the image covers the entire container height */
+  object-fit: cover; /* Cover the container without stretching */
+  border-radius: 50%; /* Makes the image circular */
+}
+
+/* Button styling */
+button {
+  border-radius: 25px; /* Rounded corners for the button */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 576px) {
+  .director-image-container {
+    height: 100px; /* Adjust image size for smaller screens */
+    width: 100px;  /* Maintain the circular shape */
   }
 
-  /* Card and image styling */
-.director-card {
-    border: 1px solid #ddd; /* Add border around the card */
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: transform 0.3s ease;
+  .director-card {
+    margin-bottom: 20px; /* Adjust spacing between cards */
   }
-  
-  .director-card:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
-  }
-  
-  .director-image-container {
-    height: 120px; /* Set a smaller height for the image container */
-    width: 120px;  /* Set a specific width for the circular image */
-    overflow: hidden; /* Ensure the image is clipped within the container */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; /* Center the image within the card */
-  }
-  
-  .director-card img {
-    width: 100%; /* Make the image fill the container */
-    height: 100%; /* Ensure the image covers the entire container height */
-    object-fit: cover; /* Cover the container without stretching */
-    border-radius: 50%; /* Makes the image circular */
-  }
-  
-  /* Button styling */
+
   button {
-    border-radius: 25px; /* Rounded corners for the button */
+    font-size: 14px; /* Make the button text smaller on smaller screens */
   }
-  
-  /* Responsive design adjustments */
-  @media (max-width: 576px) {
-    .director-image-container {
-      height: 100px; /* Adjust image size for smaller screens */
-      width: 100px;  /* Maintain the circular shape */
-    }
-  
-    .director-card {
-      margin-bottom: 20px; /* Adjust spacing between cards */
-    }
-  
-    button {
-      font-size: 14px; /* Make the button text smaller on smaller screens */
-    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .director-image-container {
+    height: 110px; /* Adjust image size for medium screens */
+    width: 110px;  /* Maintain the circular shape */
   }
-  
-  @media (min-width: 576px) and (max-width: 992px) {
-    .director-image-container {
-      height: 110px; /* Adjust image size for medium screens */
-      width: 110px;  /* Maintain the circular shape */
-    }
-  }
-  
+}

@@ -12,11 +12,11 @@ function Media() {
   return (
     <>
       {/* Banner Section */}
-      <section className="banner-img bg-success text-light py-5">
+      <section className="banner-img bg-primary text-light py-5">
         <Container>
           <Row>
             <Col className="text-center">
-              <h1 className="pt-5 mt-5 display-4">Media</h1>
+              <h1 className="pt-5 mt-5 display-4 fw-bold">Media</h1>
               <p className="lead mt-3">
                 Explore our memorable moments and key milestones.
               </p>
@@ -28,34 +28,60 @@ function Media() {
       {/* Gallery Section */}
       <section className="gallery-section py-5">
         <Container>
-        <h2 className="latest-news-title text-center"> Our Media</h2>
-          {/* Gallery Row */}
-          <Row className="mt-5">
-            {/* Gallery Item */}
-            <Col lg={4}>
-              <img src={media1} alt="Gallery Image 1" height={420} />
+          <h2 className="text-center fw-bold mb-5">Our Media</h2>
+          {/* First Gallery Row */}
+          <Row className="gy-4">
+            <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
+              <img
+                src={media1}
+                alt="Gallery Image 1"
+                className="img-fluid rounded shadow"
+                style={{ height: "420px", objectFit: "cover", width: "100%" }}
+              />
             </Col>
-            <Col lg={4}>
-              <img src={media2} alt="Gallery Image 2" height={420} />
+            <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
+              <img
+                src={media2}
+                alt="Gallery Image 2"
+                className="img-fluid rounded shadow"
+                style={{ height: "420px", objectFit: "cover", width: "100%" }}
+              />
             </Col>
-            <Col lg={4}>
-              <img src={media3} alt="Gallery Image 3" height={420} />
+            <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
+              <img
+                src={media3}
+                alt="Gallery Image 3"
+                className="img-fluid rounded shadow"
+                style={{ height: "420px", objectFit: "cover", width: "100%" }}
+              />
             </Col>
           </Row>
-        </Container>
-      </section>
 
-      <section className="gallery-section py-5">
-        <Container>
-          <Row className="">
-            <Col lg={4}>
-              <img src={media4} alt="Gallery Image 1" height={420} />
+          {/* Second Gallery Row */}
+          <Row className="gy-4 mt-4">
+            <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
+              <img
+                src={media4}
+                alt="Gallery Image 4"
+                className="img-fluid rounded shadow"
+                style={{ height: "420px", objectFit: "cover", width: "100%" }}
+              />
             </Col>
-            <Col lg={4}>
-              <img src={media5} alt="Gallery Image 2" height={420} />
+            <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
+              <img
+                src={media5}
+                alt="Gallery Image 5"
+                className="img-fluid rounded shadow"
+                style={{ height: "420px", objectFit: "cover", width: "100%" }}
+              />
             </Col>
-            <Col lg={4}>
-              <img src={media2} alt="Gallery Image 3" height={420} />
+            <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
+              <img
+                src={media2}
+                alt="Gallery Image 6"
+                className="img-fluid rounded shadow"
+                style={{ height: "420px", objectFit: "cover", width: "100%" }}
+              />
             </Col>
           </Row>
         </Container>

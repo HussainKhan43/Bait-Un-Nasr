@@ -32,75 +32,65 @@ function Home() {
     textAlign: "center",
   };
 
-  // Carousel Item background styles
-  const itemStyle = (image) => ({
-    backgroundImage: `url(${image})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    height: "100%", // Adjust the height as needed
-    width: "100%", // Adjust the width as needed
-    position: "relative",
-    borderRadius: "10px", // Rounded corners for a softer look
-  });
-
   return (
     <>
-      <section>
+        {/* Carousel Section */}
+        <section>
         <Carousel interval={5000}> {/* Auto-rotate every 5 seconds */}
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery1})` }}>
             <Carousel.Caption className="carousel-caption-custom">
               <h3>MAHIM BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="success">KNOW MORE</Button>
+              <Button variant="primary">KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery2})` }}>
             <Carousel.Caption className="carousel-caption-custom">
               <h3>DHARAVI BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="success">KNOW MORE</Button>
+              <Button variant="primary">KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery3})` }}>
             <Carousel.Caption className="carousel-caption-custom">
               <h3>MORLAND ROAD BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="success">KNOW MORE</Button>
+              <Button variant="primary">KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery4})` }}>
             <Carousel.Caption className="carousel-caption-custom">
               <h3>MEMONWADA BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="success">KNOW MORE</Button>
+              <Button variant="primary">KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery5})` }}>
             <Carousel.Caption className="carousel-caption-custom">
               <h3>JOGESHWARI WEST BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="success">KNOW MORE</Button>
+              <Button variant="primary">KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery6})` }}>
             <Carousel.Caption className="carousel-caption-custom">
               <h3>BANDRA BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="success">KNOW MORE</Button>
+              <Button variant="primary">KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery7})` }}>
             <Carousel.Caption className="carousel-caption-custom">
               <h3>JOGESHWARI EAST BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="success">KNOW MORE</Button>
+              <Button variant="primary">KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       </section>
 
-      {/* Section with text and image */}
-      <section className="section-padding mt-5">
+ {/* Section with text and image */}
+ <section className="section-padding mt-5">
         <Container>
           <Row className="align-items-center">
             <Col lg={7}>
@@ -117,112 +107,113 @@ function Home() {
               <img
                 src={img1}
                 alt="Bait-Un-Nasr"
-                className="welcome-img"
+                className="img-fluid rounded shadow"
               />
             </Col>
           </Row>
         </Container>
       </section>
-
-      {/* Latest News Section */}
+      
       <section className="section-padding section-bg-light">
-        <Container>
-          <Row className="align-items-center">
-            {/* Left Column */}
-            <Col lg={4}>
-              <h6 className="latest-news-header">18-June-2015</h6>
-              <h2 className="latest-news-title">Latest News</h2>
-              <p className="latest-news-description">
-                6th Branch of the Society opened at Jogeshwari West
-              </p>
-            </Col>
+      <Container>
+        <Row className="align-items-center">
+          {/* Left Column */}
+          <Col lg={4} md={12} className="mb-4 mb-lg-0">
+            <h6 className="latest-news-header text-muted">18-June-2015</h6>
+            <h2 className="latest-news-title display-5 fw-bold mb-3">
+              Latest News
+            </h2>
+            <p className="latest-news-description lead">
+              6th Branch of the Society opened at Jogeshwari West
+            </p>
+          </Col>
 
-            {/* Right Column with Images */}
-            <Col lg={8}>
-              <div className="d-flex-custom">
-                {/* Image 1 */}
-                <img
-                  src={img2}
-                  alt="Branch Opening"
-                  className="latest-news-img"
-                />
-                {/* Image 2 */}
-                <img
-                  src={gallery8}
-                  alt="Branch Opening"
-                  className="latest-news-img"
-                />
-                {/* Image 3 */}
-                <img
-                  src={gallery1}
-                  alt="Branch Opening"
-                  className="latest-news-img"
-                />
-              </div>
+          {/* Right Column with Images */}
+          <Col lg={8} md={12}>
+            <div className="d-flex flex-wrap justify-content-center justify-content-lg-start">
+              {/* Image 1 */}
+              <img
+                src={img2}
+                alt="Branch Opening"
+                className="latest-news-img img-fluid rounded me-2 mb-2"
+                style={{ maxWidth: "30%", height: "auto" }}
+              />
+              {/* Image 2 */}
+              <img
+                src={gallery8}
+                alt="Branch Opening"
+                className="latest-news-img img-fluid rounded me-2 mb-2"
+                style={{ maxWidth: "30%", height: "auto" }}
+              />
+              {/* Image 3 */}
+              <img
+                src={gallery1}
+                alt="Branch Opening"
+                className="latest-news-img img-fluid rounded me-2 mb-2"
+                style={{ maxWidth: "30%", height: "auto" }}
+              />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+      {/* Board of Directors Section */}
+      <section className="mt-5">
+        <Container>
+          <Row className="text-center mb-5">
+            <h2>Board of Directors</h2>
+          </Row>
+          <Row className="d-flex justify-content-center">
+            <Col xs={12} sm={6} md={4} className="mb-4">
+              <Card className="director-card">
+                <div className="director-image-container">
+                  <Card.Img variant="top" src={dir1} />
+                </div>
+                <Card.Body className="text-center">
+                  <Card.Title>Mr. Mohammed Husain Khatkhatay</Card.Title>
+                  <Card.Text>
+                    Chief Advisor and Consultant
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} sm={6} md={4} className="mb-4">
+              <Card className="director-card">
+                <div className="director-image-container">
+                  <Card.Img variant="top" src={dir2} />
+                </div>
+                <Card.Body className="text-center">
+                  <Card.Title>Mr. Mohd. Ibrahim Noor Mohd Ansari</Card.Title>
+                  <Card.Text>
+                    Chairman
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} sm={6} md={4} className="mb-4">
+              <Card className="director-card">
+                <div className="director-image-container">
+                  <Card.Img variant="top" src={dir3} />
+                </div>
+                <Card.Body className="text-center">
+                  <Card.Title >Mr. Mohd. Salim Kazi</Card.Title>
+                  <Card.Text>
+                    Managing Director
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+          <Row className="text-center">
+            <Col>
+              <Button variant="primary" size="lg" className="mx-auto d-block mt-4">READ MORE</Button>
             </Col>
           </Row>
         </Container>
       </section>
 
- {/* {board of directors} */}
-
- <section className="mt-5">
-  <Container>
-    <Row className="text-center mb-5">
-      <h2>Board of Directors</h2>
-    </Row>
-    <Row className="d-flex justify-content-center">
-      <Col xs={12} sm={6} md={4} className="mb-4">
-        <Card className="director-card">
-          <div className="director-image-container">
-            <Card.Img variant="top" src={dir1} />
-          </div>
-          <Card.Body className="text-center">
-            <Card.Title>Mr. Mohammed Husain Khatkhatay</Card.Title>
-            <Card.Text>
-              Chief Advisor and Consultant
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col xs={12} sm={6} md={4} className="mb-4">
-        <Card className="director-card">
-          <div className="director-image-container">
-            <Card.Img variant="top" src={dir2} />
-          </div>
-          <Card.Body className="text-center">
-            <Card.Title>Mr. Mohd. Ibrahim Noor Mohd Ansari</Card.Title>
-            <Card.Text>
-              Chairman
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col xs={12} sm={6} md={4} className="mb-4">
-        <Card className="director-card">
-          <div className="director-image-container">
-            <Card.Img variant="top" src={dir3} />
-          </div>
-          <Card.Body className="text-center">
-            <Card.Title >Mr. Mohd. Salim Kazi</Card.Title>
-            <Card.Text>
-              Managing Director
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-    </Row>
-    <Row className="text-center">
-      <Col>
-        <Button variant="success" size="lg" className="mx-auto d-block mt-4">READ MORE</Button>
-      </Col>
-    </Row>
-  </Container>
-</section>
-
-
-{/* Gallery Section */}
-<section className="gallery-section py-5 mt-5">
+      {/* Gallery Section */}
+      <section className="gallery-section py-5 mt-5">
         <Container>
           <h2 className="mb-4 text-center">Our Gallery</h2>
 
