@@ -86,7 +86,7 @@ function Contact() {
   return (
     <>
       {/* Banner Section */}
-      <section className="banner-img bg-primary text-light py-5">
+      <section className="banner-img bg-dark text-light py-5">
         <Container>
           <Row>
             <Col className="text-center">
@@ -172,11 +172,10 @@ function Contact() {
                   )}
                 </Form.Group>
 
-                {/* Submit Button */}
                 <Button
-                  variant="primary"
+                  style={{ backgroundColor: "#962a30" }} // Corrected `backgroundColor`
                   type="submit"
-                  className="btn-lg w-100 mb-4"
+                  className="btn-lg w-100 mb-4 custom-button"
                 >
                   Send Message
                 </Button>
@@ -219,66 +218,97 @@ function Contact() {
                   title: "Head Office",
                   address:
                     "Shop No. 3, Farida Apartment, L.J. Cross Road No.2, Mahim, Mumbai–400016.",
-                  tel: "89286 11405",
+                  tel: "24463508",
+                  googleMapsUrl:
+                    "https://www.google.com/maps?q=Shop+No.+3,+Farida+Apartment,+L.J.+Cross+Road+No.2,+Mahim,+Mumbai–400016",
                 },
                 {
                   title: "Mahim",
                   address:
                     "Shop No. 2, Farida Apartment, L.J. Cross Road No.2, Mahim, Mumbai–400016.",
-                  tel: "93242 27146",
+                  tel: "24463508",
+                  googleMapsUrl:
+                    "https://www.google.com/maps?q=Shop+No.+3,+Farida+Apartment,+L.J.+Cross+Road+No.2,+Mahim,+Mumbai–400016",
                 },
                 {
                   title: "Bandra (W)",
                   address:
                     "Shop No. 24, Zarina Co-op. Hsg. Soc., Bazar Road, Bandra (West), Mumbai – 400050.",
-                  tel: "93243 13546",
+                  tel: "26430983",
+                  googleMapsUrl:
+                    "https://www.google.com/maps?q=Shop No. 24, Zarina Co-op. Hsg. Soc., Bazar Road, Bandra (West), Mumbai – 400050.",
                 },
                 {
                   title: "Dharavi",
                   address:
                     "Shop No. 5, Nagree Apartments, Dharavi Main Road, Near Dharavi Jama Masjid, Mumbai – 400017.",
-                  tel: "87794 73045",
+                  tel: "24078395",
+                  googleMapsUrl:
+                    "https://www.google.com/maps?q=2VV2+FMP Sunni jama masjid, Dharavi Main Rd, Sheshwadi, Dharavi, Mumbai, Maharashtra 400017",
                 },
                 {
                   title: "Morland Road",
                   address:
-                    "Qayyum Manzil, Shop No.7, Near Rehmani Mosque, Off Moreland Road, Madanpura, Mumbai – 400008.",
-                  tel: "93242 16471",
+                    "Qayyum Manzil, Shop No.7, Near Rehmani Mosque, Of Moreland Road, Madanpura, Mumbai – 400008.",
+                  tel: "23071727",
+                  googleMapsUrl:
+                    "https://www.google.com/maps?q=XRCG+798, Morland Rd, Madanpura, Mumbai, Maharashtra 400008.",
                 },
                 {
                   title: "Memonwada",
                   address:
                     "68/A, 'Nas'r House', Memonwada Road, Near Chuna Bhatti Masjid, Mumbai – 400003.",
-                  tel: "89280 65364",
+                  tel: "234401070",
+                  googleMapsUrl:
+                    "https://www.google.com/maps?q=22, Mohammed Ali Rd, Pydhonie, Mandvi, Mumbai, Maharashtra 400003.",
                 },
                 {
                   title: "Jogeshwari (W)",
                   address:
-                    "Shop No. 32-33, Heena Arcade, S.V. Road, Near Deewan Center, Jogeshwari (West), Mumbai – 400102.",
-                  tel: "88508 63469",
+                    "Room No. G 2, Sayed Chawl SRA CHSL, S.V. Road, Near Laiba Hotel, Jogeshwari (West), Mumbai – 400102.",
+                  tel: "26782027",
+                  googleMapsUrl:
+                    "https://www.google.com/maps?q=Room No. G 2, Sayed Chawl SRA CHSL, S.V. Road, Near Laiba Hotel, Jogeshwari (West), Mumbai – 400102.",
                 },
                 {
                   title: "Jogeshwari (E)",
                   address:
-                    "'Nasr Spot', House No. KEM 1008, Janta Quarters, Colaba Plot, Near Jhula Maidan, Jogeshwari East, Mumbai – 400060.",
-                  tel: "96536 89680",
+                    "'Nasr Spot', Janta Quarters, Colaba Plot, House No.KEM-1008, Near Jhula Maidan, Jogeshwari East, Mumbai – 400060.",
+                  tel: "28378366",
+                  googleMapsUrl:
+                    "https://www.google.com/maps?q=Saraswati Baug, Bandra Plot, Jogeshwari East, Mumbai, Maharashtra 400060",
                 },
                 {
                   title: "Mumbra",
                   address:
-                    "'Nasr Spot', House No. KEM 1008, Janta Quarters, Colaba Plot, Near Jhula Maidan, Jogeshwari East, Mumbai – 400060.",
-                  tel: "96536 89680",
+                    "Shop No. 9', Nasheman Colony,Behind Pizza House, Old Mumbai Pune Rd,Kausa, Mumbra Thane – 400612.",
+                  tel: "9372487506",
+                  googleMapsUrl:
+                    "https://www.google.com/maps?q=H shop no, Telephone Exchange, 1, near kausa, Nasheman Colony, Old Nasheman Colony, Kausa, Mumbra, Thane, Maharashtra 400612.",
+                },
+                {
+                  title: "Mira Road",
+                  address:
+                    "office No. 116', New Poonam Plaza,opp Narendra Park, Haideri Chowk Rd, Mira road(E) Thane – 401107.",
+                  tel: "8169664640",
+                  googleMapsUrl:
+                    "https://www.google.com/maps?q=office No. 116', New Poonam Plaza,opp Narendra Park, Haideri Chowk Rd, Mira road(E) Thane – 401107.",
                 },
               ].map((branch, index) => (
-                <Col md={6} lg={4} key={index} className="mb-4">
-                  <div className="branch-card p-4 border">
+                <Col md={6} lg={4} key={index} className="mb-4 ">
+                  <div className="branch-card shadow p-4 border">
                     <h5 className="fw-bold">{branch.title}</h5>
                     <p>{branch.address}</p>
                     <p>
-                      <i className="fa-solid fa-phone text-success me-2"></i>
+                      <i className="fa-solid fa-phone  me-2"></i>
                       Tel.: {branch.tel}
                     </p>
-                    <Button variant="link" className="p-0 text-success">
+                    <Button
+                      style={{ backgroundColor: "#962a30" }} 
+                      onClick={() =>
+                        window.open(branch.googleMapsUrl, "_blank")
+                      }
+                    >
                       Get Direction
                     </Button>
                   </div>

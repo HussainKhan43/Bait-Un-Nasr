@@ -8,7 +8,7 @@ function Activities() {
   return (
     <>
       {/* Banner Section */}
-      <section className="banner-img bg-primary text-light py-5">
+      <section className="banner-img bg-dark text-light py-5">
         <Container>
           <Row>
             <Col className="text-center">

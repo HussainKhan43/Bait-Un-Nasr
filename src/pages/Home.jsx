@@ -9,6 +9,7 @@ import gallery5 from "../assets/gallery5.jpg";
 import gallery6 from "../assets/gallery6.jpg";
 import gallery7 from "../assets/gallery7.jpg";
 import gallery8 from "../assets/gallery8.jpg";
+import logo from "../assets/logo.png";
 import img1 from "../assets/img1.jpeg";
 import img2 from "../assets/img2.jpg";
 import dir1 from "../assets/dir1.jpg";
@@ -19,6 +20,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import '../pages/Home.css';
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   // Inline style for captions (same as before)
@@ -32,6 +34,13 @@ function Home() {
     textAlign: "center",
   };
 
+  //redirecting by click on btn
+  const navigate = useNavigate();
+
+  const handleRedirect=()=>{
+    navigate("/Directors");
+  };
+
   return (
     <>
         {/* Carousel Section */}
@@ -41,49 +50,49 @@ function Home() {
             <Carousel.Caption className="carousel-caption-custom">
               <h3>MAHIM BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="primary">KNOW MORE</Button>
+              <Button style={{ backgroundColor: "#962a30" }} >KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery2})` }}>
             <Carousel.Caption className="carousel-caption-custom">
-              <h3>DHARAVI BRANCH</h3>
+              <h3>MORLAND ROAD BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="primary">KNOW MORE</Button>
+              <Button style={{ backgroundColor: "#962a30" }} >KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery3})` }}>
             <Carousel.Caption className="carousel-caption-custom">
-              <h3>MORLAND ROAD BRANCH</h3>
+              <h3>DHARAVI BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="primary">KNOW MORE</Button>
+              <Button style={{ backgroundColor: "#962a30" }} >KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery4})` }}>
             <Carousel.Caption className="carousel-caption-custom">
               <h3>MEMONWADA BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="primary">KNOW MORE</Button>
+              <Button  style={{ backgroundColor: "#962a30" }} >KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery5})` }}>
             <Carousel.Caption className="carousel-caption-custom">
               <h3>JOGESHWARI WEST BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="primary">KNOW MORE</Button>
+              <Button  style={{ backgroundColor: "#962a30" }} >KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery6})` }}>
             <Carousel.Caption className="carousel-caption-custom">
               <h3>BANDRA BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="primary">KNOW MORE</Button>
+              <Button style={{ backgroundColor: "#962a30" }} >KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery7})` }}>
             <Carousel.Caption className="carousel-caption-custom">
               <h3>JOGESHWARI EAST BRANCH</h3>
               <p>MAKING YOUR FUTURE OUR BUSINESS.</p>
-              <Button variant="primary">KNOW MORE</Button>
+              <Button  style={{ backgroundColor: "#962a30" }} >KNOW MORE</Button>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
@@ -91,28 +100,43 @@ function Home() {
 
  {/* Section with text and image */}
  <section className="section-padding mt-5">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg={7}>
-              <h2 className="latest-news-title">Welcome to BAIT-UN-NASR</h2>
-              <hr />
-              <p>
-                The Management of Bait-un-Nasr welcomes you to the world of India's premier Islamic financial institution. We are sure that as you read about the institution, you too will feel enthused with the achievements of the Society and want to share the sense of pride that comes with associating with the activities of this growing institution.
-              </p>
-              <p>
-                Registered in 1976 as an Urban Co-operative Credit Society under The Maharashtra Co-operative Societies Act, 1960, the main purpose of the Society is to provide banking facilities to its members on Islamic lines. It accepts deposits from its members on an interest-free basis and extends loans to them on the basis of recovery of the actual cost of operation and under other Shariah-compliant formats. Membership of the Society is open to all citizens residing in its area of operation, irrespective of caste or creed.
-              </p>
-            </Col>
-            <Col lg={5}>
-              <img
-                src={img1}
-                alt="Bait-Un-Nasr"
-                className="img-fluid rounded shadow"
-              />
-            </Col>
-          </Row>
-        </Container>
-      </section>
+  <Container>
+    <Row className="align-items-center">
+      <Col lg={7} className="d-flex flex-column justify-content-between">
+        <div>
+          <h2 className="latest-news-title">Welcome to BAIT-UN-NASR</h2>
+          <hr />
+          <p >
+            The Management of Bait-un-Nasr welcomes you to the world of India's
+            premier Islamic financial institution. We are sure that as you read
+            about the institution, you too will feel enthused with the achievements
+            of the Society and want to share the sense of pride that comes with
+            associating with the activities of this growing institution.
+          </p>
+          <p>
+            Registered in 1976 as an Urban Co-operative Credit Society under The
+            Maharashtra Co-operative Societies Act, 1960, the main purpose of the
+            Society is to provide banking facilities to its members on Islamic lines.
+            It accepts deposits from its members on an interest-free basis and extends
+            loans to them on the basis of recovery of the actual cost of operation
+            and under other Shariah-compliant formats. Membership of the Society is
+            open to all citizens residing in its area of operation, irrespective of
+            caste or creed.
+          </p>
+        </div>
+      </Col>
+      <Col lg={5} className="d-flex align-items-stretch">
+        <img
+          src={logo}
+          alt="Bait-Un-Nasr"
+          className="img-fluid rounded shadow"
+          style={{ objectFit: 'cover', height: '100%' }} // Ensures image fills the space
+        />
+      </Col>
+    </Row>
+  </Container>
+</section>
+
       
       <section className="section-padding section-bg-light">
       <Container>
@@ -206,7 +230,7 @@ function Home() {
           </Row>
           <Row className="text-center">
             <Col>
-              <Button variant="primary" size="lg" className="mx-auto d-block mt-4">READ MORE</Button>
+              <Button style={{ backgroundColor: "#962a30" }}  size="lg" className="mx-auto d-block mt-4" onClick={handleRedirect}>READ MORE</Button>
             </Col>
           </Row>
         </Container>

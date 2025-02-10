@@ -12,14 +12,12 @@ function Media() {
   return (
     <>
       {/* Banner Section */}
-      <section className="banner-img bg-primary text-light py-5">
+      <section className="banner-img bg-dark text-light py-5">
         <Container>
-          <Row>
+        <Row>
             <Col className="text-center">
-              <h1 className="pt-5 mt-5 display-4 fw-bold">Media</h1>
-              <p className="lead mt-3">
-                Explore our memorable moments and key milestones.
-              </p>
+              <h1 className="pt-5 mt-5 display-4">Media</h1>
+              <p className="lead mt-3">Explore the Deposit options available for you to achieve your financial goals.</p>
             </Col>
           </Row>
         </Container>

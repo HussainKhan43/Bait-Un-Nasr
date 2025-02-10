@@ -15,6 +15,15 @@ import ExDirectors from './pages/ExDirectors';
 import Activities from './pages/Activities'
 import Media from './pages/Media';
 import Progress from './pages/Progress';
+import Mahim from './pages/Mahim'
+import Bandra from './pages/Bandra'
+import Dharavi from './pages/Dharavi'
+import Morland from './pages/Morland'
+import Memonwada from './pages/Memonwada'
+import JogeshwariE from './pages/JogeshwariE'
+import Mumbra from './pages/Mumbra'
+import Miraroad from './pages/Miraroad'
+import JogeshwariW from './pages/JogeshwariW'
 
 
 
@@ -32,9 +41,17 @@ function App() {
         <Route path="/Activities" element={<Activities />} />
         <Route path="/Media" element={<Media />} />
         <Route path="/Progress" element={<Progress/>} />
-
         <Route path="/Deposit" element={<Deposit />} />
         <Route path="/Loan" element={<Loan />} />
+        <Route path="/Mahim" element={<Mahim />} />
+        <Route path="/Bandra" element={<Bandra />} />
+        <Route path="/Dharavi" element={<Dharavi />} />
+        <Route path="/Morland" element={<Morland />} />
+        <Route path="/Memonwada" element={<Memonwada/>} />
+        <Route path="/JogeshwariE" element={<JogeshwariE/>} />
+        <Route path="/JogeshwariW" element={<JogeshwariW/>} />
+        <Route path="/Mumbra" element={<Mumbra/>} />
+        <Route path="/Miraroad" element={<Miraroad/>} />
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/Contact" element={<Contact />} />        
       </Routes>

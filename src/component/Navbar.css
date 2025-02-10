@@ -1,0 +1,111 @@
+
+/* Top Black Bar */
+.top-bar {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end; /* Aligns content to the right */
+  gap: 25px; /* Adds space between elements */
+  font-size: 14px;
+}
+
+.top-bar span {
+  cursor: pointer;
+}
+
+/* Main Navbar */
+.main-navbar {
+  background-color: white;
+  border-bottom: 3px solid red;
+  height: 80px; /* Adjusted for better responsiveness */
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar Brand (Logo) */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 80px; /* Adjusted for better scaling */
+  max-height: 100px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar Links */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: red;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 992px) {
+  .top-bar {
+    justify-content: center; /* Center align for mobile */
+    flex-direction: column;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .main-navbar {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .navbar-logo {
+    height: 60px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 5px 0;
+  }
+}
+ 
+  .nav-item {
+    font-weight: bold;
+    color: black !important;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+  
+  .nav-item:hover {
+    color: red !important;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+  }
+  
+  /* Dropdown Styling */
+  .nav-item .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-item .dropdown-item:hover {
+    background-color: red;
+    color: white;
+  }
+  

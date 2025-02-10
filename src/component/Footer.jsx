@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import facebook from "../assets/facebook-img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,21 +14,30 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
+
 
 function Footer() {
+   //redirecting by click on btn
+   const navigate = useNavigate();
+
+   const handleMove=()=>{
+     navigate("/Introduction");
+   };
+ 
   return (
-    <footer className="bg-primary text-light mt-auto py-5">
+    <footer className="bg-dark text-light mt-auto py-5">
       <Container>
         <Row className="align-items-start">
           {/* Logo and Description */}
           <Col xs={12} md={6} lg={3} className="text-center text-md-start mb-4">
-            <img src={logo} alt="Company Logo" height={50} className="mb-3" />
+            <img src={logo} alt="Company Logo" height={70} className="mb-3" />
             <p className="mb-3">
               The main purpose of the Society is to provide banking facilities
               to its members on Islamic lines. It accepts deposits from its
               members on an interest-free basis.
             </p>
-            <Button variant="light" className="mt-2">
+            <Button style={{ backgroundColor: "#962a30" }}  onClick={handleMove} className="mt-2">
               KNOW MORE
             </Button>
           </Col>
@@ -48,7 +57,7 @@ function Footer() {
                 </a>
               </li>
               <li className="mb-2">
-                <a href="/Services" className="text-light text-decoration-none">
+                <a href="/Deposit" className="text-light text-decoration-none">
                   Services
                 </a>
               </li>
