@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import axios from "axios";
 
 function Contact() {
   // State for form fields and validation
@@ -20,6 +21,37 @@ function Contact() {
     phone: "",
     message: "",
   });
+
+  // State for form submission (used to trigger useEffect)
+  const [submitted, setSubmitted] = useState(false);
+
+  // useEffect that runs when 'submitted' state changes
+  useEffect(() => {
+    const submitUserData = async () => {
+      if (submitted) {
+        const { name, email, phone, message } = formData;
+
+        try {
+          // Send data using Axios to your backend API
+          const response = await axios.post('http://localhost:4001/api/user/contact', { name, email, phone, message });
+
+          // Handle the response (e.g., success message or redirect)
+          console.log('User created successfully:', response.data);
+          alert('Message submitted successfully!');
+        } catch (error) {
+          // Handle errors (e.g., validation errors, server errors)
+          console.error('There was an error!', error);
+          alert('Failed to send message. Please try again.');
+        } finally {
+          setSubmitted(false); // Reset submission flag
+          setFormData({ name: "", email: "", phone: "", message: "" }); // Reset form data after submission
+          setErrors({ name: "", email: "", phone: "", message: "" }); // Reset errors after submission
+        }
+      }
+    };
+
+    submitUserData(); // Call the function inside useEffect when 'submitted' changes
+  }, [submitted, formData]); // Dependency array to trigger on formData change
 
   // Handle input change
   const handleInputChange = (e) => {
@@ -73,11 +105,7 @@ function Contact() {
     e.preventDefault();
     if (validateForm()) {
       // Form is valid, proceed with submission
-      console.log("Form submitted:", formData);
-      alert("Form submitted successfully!");
-      // Reset form
-      setFormData({ name: "", email: "", phone: "", message: "" });
-      setErrors({ name: "", email: "", phone: "", message: "" });
+      setSubmitted(true); // Set 'submitted' state to trigger useEffect
     } else {
       console.log("Form validation failed");
     }
@@ -296,7 +324,7 @@ function Contact() {
                 },
               ].map((branch, index) => (
                 <Col md={6} lg={4} key={index} className="mb-4 ">
-                  <div className="branch-card shadow p-4 border">
+                  <div className="branch-card p-4 border">
                     <h5 className="fw-bold">{branch.title}</h5>
                     <p>{branch.address}</p>
                     <p>
@@ -304,7 +332,7 @@ function Contact() {
                       Tel.: {branch.tel}
                     </p>
                     <Button
-                      style={{ backgroundColor: "#962a30" }} 
+                      style={{ backgroundColor: "#962a30" }}
                       onClick={() =>
                         window.open(branch.googleMapsUrl, "_blank")
                       }

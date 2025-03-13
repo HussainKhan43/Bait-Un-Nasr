@@ -8,7 +8,7 @@ function AppNavbar() {
   return (
     <>
       {/* Top Black Bar */}
-      <div className="top-bar">
+      <div className="top-bar ">
         <span>
           📧 info@bait-un-nasr.org
         </span>
@@ -16,7 +16,7 @@ function AppNavbar() {
       </div>
 
       {/* Main Navbar */}
-      <Navbar expand="lg" className="main-navbar">
+      <Navbar expand="lg" className="main-navbar ">
         <Container>
           <Navbar.Brand as={Link} to="/" className="navbar-brand">
             <img src={logo} alt="Logo" className="navbar-logo" />
@@ -33,7 +33,7 @@ function AppNavbar() {
               <NavDropdown
                 title="ABOUT"
                 id="navbarScrollingDropdown"
-                className="mx-2"
+                className="mx-2 "
               >
                 <NavDropdown.Item as={Link} to="/Introduction">
                   Introduction

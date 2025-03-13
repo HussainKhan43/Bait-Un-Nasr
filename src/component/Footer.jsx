@@ -31,7 +31,7 @@ function Footer() {
         <Row className="align-items-start">
           {/* Logo and Description */}
           <Col xs={12} md={6} lg={3} className="text-center text-md-start mb-4">
-            <img src={logo} alt="Company Logo" height={70} className="mb-3" />
+            <img src={logo} alt="Company Logo" height={60} className="mb-3" />
             <p className="mb-3">
               The main purpose of the Society is to provide banking facilities
               to its members on Islamic lines. It accepts deposits from its

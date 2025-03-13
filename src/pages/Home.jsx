@@ -10,6 +10,9 @@ import gallery6 from "../assets/gallery6.jpg";
 import gallery7 from "../assets/gallery7.jpg";
 import gallery8 from "../assets/gallery8.jpg";
 import logo from "../assets/logo.png";
+import logo2 from "../assets/logo2.png";
+import logo3 from "../assets/logo3.png";
+import Hero from "../assets/Hero.png";
 import img1 from "../assets/img1.jpeg";
 import img2 from "../assets/img2.jpg";
 import dir1 from "../assets/dir1.jpg";
@@ -43,8 +46,8 @@ function Home() {
 
   return (
     <>
-        {/* Carousel Section */}
-        <section>
+         {/* Carousel Section */}
+         <section>
         <Carousel interval={5000}> {/* Auto-rotate every 5 seconds */}
           <Carousel.Item className="carousel-item-custom" style={{ backgroundImage: `url(${gallery1})` }}>
             <Carousel.Caption className="carousel-caption-custom">
@@ -96,7 +99,8 @@ function Home() {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </section>
+      </section> 
+
 
  {/* Section with text and image */}
  <section className="section-padding mt-5">
@@ -127,9 +131,9 @@ function Home() {
       </Col>
       <Col lg={5} className="d-flex align-items-stretch">
         <img
-          src={logo}
+          src={logo2}
           alt="Bait-Un-Nasr"
-          className="img-fluid rounded shadow"
+          className="img-fluid rounded "
           style={{ objectFit: 'cover', height: '100%' }} // Ensures image fills the space
         />
       </Col>
